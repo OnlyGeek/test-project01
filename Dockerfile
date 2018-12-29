@@ -1,2 +1,2 @@
-FROM centos:6.5
+FROM centos:6
 COPY test.sh /
