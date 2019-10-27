@@ -10,9 +10,18 @@ pipeline {
                 '''
       }
     }
-    stage('deploy') {
+    stage('Test') {
       steps {
-        sh 'echo test'
+        sh 'echo "testing..."'
+        sh '''
+                    echo "Multiline shell steps works too"
+                    ls -lah
+                '''
+      }
+    }
+    stage('Deploy') {
+      steps {
+        sh 'echo "Deploying"'
       }
     }
   }
